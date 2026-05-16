@@ -7,12 +7,11 @@
   --error: #d22c2c;
   --black: #000000;
   --bg-lighter: #111111;
-  --card-bg: #00000056;
   --card-fill-bg: #050505;
   --border: #1f1f1f;
   --light: #ededed;
   --text: #757575;
-  --bg: #0a0a0a;
+  --card-bg: #0a0a0a;
 }
 
 * {
@@ -30,7 +29,7 @@ form {
   flex-direction: column;
   align-items: center;
   border: 1px solid var(--border);
-  background-color: var(--bg);
+  background-color: var(--card-bg);
   backdrop-filter: blur(20px);
 }
 
@@ -95,10 +94,19 @@ textarea {
   color: var(--light);
 }
 
+h1 {
+  color: var(--light);
+  font-size: 50px;
+}
+
 h2,
 #envelope {
   color: var(--light);
   font-size: 30px;
+}
+
+p {
+  color: var(--text);
 }
 
 h3,
