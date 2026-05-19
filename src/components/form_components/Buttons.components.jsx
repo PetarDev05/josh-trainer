@@ -5,21 +5,22 @@ import { TbCircleDotted } from "react-icons/tb";
 
 const Buttons = ({ loading, clearInput }) => {
   return (
-    <div id="container01" className="w-full justify-between">
-      <div id="container02" className="gap-3 text-xl text-(--text)">
-        <span className="span">
+    <div className="w-full flex flex-col sm:flex-row items-end sm:items-center gap-5 justify-between">
+      <div className="w-full sm:w-fit flex flex-row items-center gap-3 text-xl text-(--text)">
+        <span className="flex-1 flex items-center justify-center text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
           <FaInstagram />
         </span>
-        <span className="span">
+        <span className="flex-1 flex items-center justify-center text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
           <FaLinkedin />
         </span>
-        <span className="span">
+        <span className="flex-1 flex items-center justify-center text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
           <RiTwitterXFill />
         </span>
       </div>
 
-      <div id="container03" className="gap-3">
-        <span className="span"
+      <div className="flex flex-row items-center gap-3">
+        <span
+          className="hover:bg-(--light) text-(--light) hover:text-(--dark) transition-all duration-200 px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer"
           disabled={loading}
           id="refresh"
           type="button"
@@ -27,8 +28,17 @@ const Buttons = ({ loading, clearInput }) => {
         >
           <IoRefresh className="text-xl" />
         </span>
-        <button className="" id="submit" disabled={loading} type="submit">
-          {loading ? <TbCircleDotted className="animate-spin text-2xl" /> : "Submit"}
+        <button
+          className="hover:bg-(--light) text-(--light) hover:text-(--dark) transition-all duration-200"
+          id="submit"
+          disabled={loading}
+          type="submit"
+        >
+          {loading ? (
+            <TbCircleDotted className="animate-spin text-2xl" />
+          ) : (
+            "Submit"
+          )}
         </button>
       </div>
     </div>

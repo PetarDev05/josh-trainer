@@ -35,40 +35,37 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
+
     setTimeout(() => {
       setLoading(false);
       toast.success("Message sent.");
+      setInput({
+        name: "",
+        email: "",
+        trainingLevel: "",
+        message: "",
+      });
     }, 3000);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-100 flex flex-col items-center gap-5">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-100 flex flex-col items-center gap-5 p-4 sm:p-6"
+    >
       <FormHead />
 
       {/* Name Input */}
-      <NameInput
-        input={input}
-        handleChange={handleChange}
-      />
+      <NameInput input={input} handleChange={handleChange} />
 
       {/* Email Input */}
-      <EmailInput
-        input={input}
-        handleChange={handleChange}
-      />
+      <EmailInput input={input} handleChange={handleChange} />
 
       {/* Select Input */}
-      <SelectInput
-        input={input}
-        handleChange={handleChange}
-      />
+      <SelectInput input={input} handleChange={handleChange} />
 
       {/* TextArea Input */}
-      <TextArea
-        input={input}
-        handleChange={handleChange}
-      />
+      <TextArea input={input} handleChange={handleChange} />
 
       {/* Buttons */}
       <Buttons loading={loading} clearInput={clearInput} />
