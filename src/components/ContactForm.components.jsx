@@ -6,6 +6,7 @@ import EmailInput from "./form_components/EmailInput.components.jsx";
 import SelectInput from "./form_components/SelectInput.components.jsx";
 import TextArea from "./form_components/TextArea.components.jsx";
 import Buttons from "./form_components/Buttons.components.jsx";
+import { motion } from "motion/react";
 
 const ContactForm = () => {
   const [input, setInput] = useState({
@@ -49,7 +50,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form
+    <motion.form
+      initial={{ y: 35, opacity: 0 }}
+      transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.5 }}
       onSubmit={handleSubmit}
       className="w-full max-w-100 flex flex-col items-center gap-5 p-4 sm:p-6"
     >
@@ -69,7 +74,7 @@ const ContactForm = () => {
 
       {/* Buttons */}
       <Buttons loading={loading} clearInput={clearInput} />
-    </form>
+    </motion.form>
   );
 };
 

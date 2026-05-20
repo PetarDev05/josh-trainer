@@ -18,7 +18,7 @@ const Footer = () => {
           <p className="">Consultation</p>
         </div>
       </div>
-      <p>&copy; All Rights Reserved. Josh Coach 2026</p>
+      <p>&copy; All Rights Reserved. Josh 2026</p>
     </footer>
   );
 };

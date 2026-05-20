@@ -7,13 +7,16 @@ const Buttons = ({ loading, clearInput }) => {
   return (
     <div className="w-full flex flex-col sm:flex-row items-end sm:items-center gap-5 justify-between">
       <div className="w-full sm:w-fit flex flex-row items-center gap-3 text-xl text-(--text)">
-        <span className="flex-1 flex items-center justify-center text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
+        <span className="flex-1 flex items-center justify-center hover:bg-(--light)
+hover:text-(--dark) transition-all duration-200 text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
           <FaInstagram />
         </span>
-        <span className="flex-1 flex items-center justify-center text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
+        <span className="flex-1 flex items-center justify-center hover:bg-(--light)
+hover:text-(--dark) transition-all duration-200 text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
           <FaLinkedin />
         </span>
-        <span className="flex-1 flex items-center justify-center text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
+        <span className="flex-1 flex items-center justify-center hover:bg-(--light)
+hover:text-(--dark) transition-all duration-200 text-(--light) px-2 py-1.75 border border-(--border) rounded-[5px] cursor-pointer">
           <RiTwitterXFill />
         </span>
       </div>
@@ -29,7 +32,7 @@ const Buttons = ({ loading, clearInput }) => {
           <IoRefresh className="text-xl" />
         </span>
         <button
-          className="hover:bg-(--light) text-(--light) hover:text-(--dark) transition-all duration-200"
+          className="w-21 flex items-center justify-center hover:bg-(--light) text-(--light) hover:text-(--dark) transition-all duration-200"
           id="submit"
           disabled={loading}
           type="submit"
