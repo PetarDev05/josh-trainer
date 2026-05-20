@@ -9,7 +9,7 @@ import Footer from "./components/Footer.components.jsx";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   return (
     <div>
